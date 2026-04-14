@@ -1,39 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@100..800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./src/assets/styles/styles.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./src/assets/images/logo.svg" type="image/svg+xml" />
+  <title>Desenvolvimento sustentável</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@100..800&display=swap"
+  rel="stylesheet"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="./src/assets/styles/style.css">
   <body>
-    <header>
-      <div class="logo">
-        <img src="./src/assets/images/logo.png" alt="ODS 13" />
+    <header class="bg-gray-100 sticky top-0 relative z-20">
+      <div class="container mx-auto py-2 px-3 sm:py-4 sm:px-0 flex items justify-between font-sora ">
+        <a href="/" class="flex gap-2 items-center">
+          <img class="w-10" src="./src/assets/images/logo.svg" alt="ODS 13" />
+          <p class="text-green-900 font-bold hidden sm:block">Desenvolvimento sustentável</p>
+        </a>
+        <nav class="text-green-900 items-center gap-5 hidden md:flex">
+          <a href="#sobre" class="hover:underline">Sobre</a>
+          <a href="#dados" class="hover:underline">Dados Globais</a>
+          <a href="#solucoes" class="hover:underline">Soluções</a>
+        </nav>
       </div>
     </header>
     <main>
-      <section class="hero">
-        <div class="cta">
-          <div class="intro">
-            <h1>O planeta aquece enquanto nós dormimos</h1>
-            <h2>
-              A mudança climática não espera. Cada décimo de grau importa.
-              Precisamos agir agora, juntos, sem desculpas.
-            </h2>
+      <section class="hero h-100 sm:h-120 md:h-140 lg:h-180 relative overflow-hidden">
+        <img
+        src="./src/assets/images/hero-bg.jpg"
+        class="absolute inset-0 w-full h-full object-cover object-center z-0"
+        alt="Hero image"
+        >
+        <div class="container mx-auto relative h-full z-10">
+          <div class="flex flex-col gap-10 items-center justify-center h-full">
+            <div class=" flex flex-col gap-2 md:w-2xl">
+              <h1 class="font-sora text-white text-4xl font-bold text-center md:w-2xl sm:text-5xl md:text-6xl ">O planeta está pedindo socorro. Você vai ouvir?</h1>
+              <h2 class="font-sora text-white text-xs text-center hidden sm:block"> O clima da Terra está mudando em velocidade alarmante. Temperaturas extremas, enchentes, secas e incêndios são sinais de um planeta em desequilíbrio. A boa notícia: ainda dá tempo de agir.</h2>
+            </div>
+            <div class="flex gap-3">
+              <button class="bg-emerald-700 font-inter text-white px-3 py-1 rounded cursor-pointer">Quero Ajudar</button>
+              <button class="border-1 border-white font-inter text-white px-3 py-1 rounded cursor-pointer">Ver impacto</button>
+            </div>
           </div>
-          <div class="button-wrapper">
-            <button class="primary">Quero Agir Agora</button>
-            <button class="secondary">Saiba mais</button>
+        </div>
+      </section>
+      <section id="sobre" class="">
+        <div class="container mx-auto py-28">
+          <div class="mb-20">
+            <p class="text-center mb-4 font-inter">Urgência</p>
+            <h2 class="font-sora font-bold text-xl mx-auto md:text-6xl text-center md:w-2xl sm:text-5xl md:text-6xl">O que está acontecendo com o nosso planeta?</h2>
+          </div>
+          
+          <div class="flex flex-col md:flex-row gap-8">
+            <div class="card flex flex-1 flex-col gap-4">
+              <img class="rounded w-full" src="./src/assets/images/card-1.jpg" alt="O clima está mudando">
+              <h3 class="font-bold text-xl text-center">O clima está mudando</h3>
+              <p class="text-lg">A temperatura média da Terra já aumentou mais de 1°C nos últimos 100 anos. Isso pode parecer pouco, mas está causando eventos extremos cada vez mais frequentes — secas, inundações, ondas de calor e tempestades que afetam milhões de pessoas todos os anos.</p>
+            </div>
+            
+            <div class="card flex flex-1 flex-col gap-4">
+              <img class="rounded w-full" src="./src/assets/images/card-2.jpg" alt="Os sinais estão em todo lugar">
+              <h3 class="font-bold text-xl text-center">Os sinais estão em todo lugar</h3>
+              <p class="text-lg">Geleiras derretendo, oceanos aquecendo, espécies desaparecendo e estações do ano fora do ritmo. O que antes era raro está se tornando comum. O desequilíbrio ambiental já afeta a produção de alimentos, o acesso à água e a saúde de populações inteiras.</p>
+            </div>
+            
+            <div class="card flex flex-1 flex-col gap-4">
+              <img class="rounded w-full" src="./src/assets/images/card-3.jpg" alt="Mas ainda podemos mudar">
+              <h3 class="font-bold text-xl text-center">Mas ainda podemos mudar</h3>
+              <p class="text-lg">Países, cidades e pessoas ao redor do mundo já estão agindo. Energia limpa, reflorestamento, consumo consciente e políticas ambientais estão provando que é possível reverter parte dos danos — se agirmos juntos e com urgência.</p>
+            </div>
           </div>
         </div>
       </section>
     </main>
   </body>
-</html>
+  </html>
